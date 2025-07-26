@@ -16,7 +16,7 @@ export function Filter({status, isActive, ...rest}: Props) {
       {...rest}
     >
       <StatusIcon status={status} />
-      <Text style={styles.title}>
+      <Text style={[styles.title, {fontWeight: isActive ? 'bold' : '400'}]}>
         {status === FilterStatus.DONE ? 'Comprados': 'Pendentes'}
       </Text>
     </TouchableOpacity>
